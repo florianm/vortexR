@@ -1,3 +1,5 @@
+[![Coverage Status](https://coveralls.io/repos/carlopacioni/vortexR/badge.svg?branch=master&service=github)]
+
 # vortexR
 An R package for Post Vortex Simulation Analysis.  
 
