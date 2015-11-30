@@ -35,3 +35,4 @@ Suggests:
     gridExtra,
     testthat
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1
