@@ -9,9 +9,6 @@ vignette: >
   \usepackage[utf8]{inputenc}
 ---
 
-
-
-
 # Introduction
 ```VortexR``` is an R package that automatises common tasks carried out on outputs of population viability analysis (PVA) that were generated with the software Vortex (Lacy & Pollak 2013), including collating Vortex output files, generating plots and conducting basic analysis (e.g. pairwise comparisons of scenarios) and more advanced statistics such as fitting a regression model to investigate the main and the interaction effects of the variables of interest. We call this process post-Vortex simulation analysis (PVSA). The user enters minimal information using arguments in R functions. In some instances, ```vortexR``` will behave differently depending on the data that are fed in. Function-specific details are provided in the following sections of the manual.
 
@@ -156,8 +153,8 @@ library(data.table, quietly=TRUE)
 library(gridExtra, quietly=TRUE)
 setnames(lkup.st.classic, c("Scenario", "K", "Ad.Mor", "Juv.Mor", 
                           "PY.Mor", "SD.Mor", "Mate.mon", "Init.N"))
-grid.table(lkup.st.classic, digits=1, gpar.corefill=gpar(fill="white", col="white"),
-           gpar.rowfill=gpar(fill="white", col="white"))
+gp = grid::gpar(fill="white", col="white")
+gridExtra::grid.table(lkup.st.classic)#, digits=1, gpar.corefill=gp, gpar.rowfill=gp)
 ```
 
 
