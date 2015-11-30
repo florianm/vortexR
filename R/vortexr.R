@@ -1617,7 +1617,23 @@ Nadults <- function (data=NULL,
 #' scenarios, default: NA
 #' @param save2disk Whether to save the output to disk, default: TRUE
 #' @param dir_out The local path to store the output. Default: DataAnalysis/Pairwise
-#' @return Several output. See vignette for details.
+#' @return a named list of 12 elements:
+#'  SC: sensitivity coefficients,
+#'  SSMD: the strictly standardised mean difference,
+#'  SSMD.table:
+#'  SSMD.table.pvalues: the p-values associated with SSMD,
+#'  ranks.SC:
+#'  ranks.SSMD:
+#'  ranks.mean.SC:
+#'  ranks.mean.SSMD:
+#'  Kendall:
+#'  Kendall.means:
+#'  coef.table:
+#'  mean.coef.table:
+#'  mean.SSMD.table:
+#'  mean.SSMD.table.pvalues:
+#'
+#'
 #' @references Conroy, S. D. S., and B. W. Brook. 2003. Demographic sensitivity and
 #' persistence of the threatened white- and orange-bellied frogs of Western
 #' Australia. Population Ecology 45:105-114.
