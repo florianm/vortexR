@@ -22,10 +22,10 @@ jobs:
           - { os: windows-latest, r: "devel" }
           - { os: windows-latest, r: "release" }
           - { os: windows-latest, r: "oldrel" }
-          - { os: macOS-latest, r: "devel" }
+          - { os: macOS-latest, r: "devel" } # fails at script on missing glmulti
           - { os: macOS-latest, r: "release", pkgdown: "true" }
           - { os: macOS-latest, r: "oldrel" }
-          - { os: ubuntu-latest, r: "devel" }
+          # - { os: ubuntu-latest, r: "devel" } # fails on setup-r
           - { os: ubuntu-latest, r: "release" }
           - { os: ubuntu-latest, r: "oldrel" }
 
@@ -63,8 +63,9 @@ jobs:
           r-version: ${{ matrix.config.r }}
           Ncpus: 4
 
-      - name: R CMD javareconf
-        run: R CMD javareconf
+      - name: sudo R CMD javareconf
+        if: runner.os != 'Windows'
+        run: sudo R CMD javareconf
 
       # LaTeX. Installation time:
       # Linux: ~ 1 min
