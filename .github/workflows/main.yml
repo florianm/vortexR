@@ -65,7 +65,7 @@ jobs:
 
       - name: sudo R CMD javareconf
         if: runner.os != 'Windows'
-        run: sudo R CMD javareconf
+        run: sudo R CMD javareconf -e
 
       # LaTeX. Installation time:
       # Linux: ~ 1 min
@@ -149,11 +149,8 @@ jobs:
           Rscript -e "if (!requireNamespace('remotes')) install.packages('remotes', type = 'source')"
           Rscript -e "if (getRversion() < '3.2' && !requireNamespace('curl')) install.packages('curl', type = 'source')"
 
-
-      - name: Debug current build
-        uses: mxschmitt/action-tmate@v2
-
-
+      # - name: Debug current build
+      #   uses: mxschmitt/action-tmate@v2
 
       - name: "[Stage] Install"
         if: matrix.config.os != 'macOS-latest' || matrix.config.r != 'devel'
