@@ -22,12 +22,12 @@ jobs:
           - { os: windows-latest, r: "devel" }
           - { os: windows-latest, r: "release" }
           - { os: windows-latest, r: "oldrel" }
-          # - { os: macOS-latest, r: "devel" } # fails at script on missing glmulti
+          - { os: macOS-latest, r: "devel" } # fails at script on missing glmulti
           - { os: macOS-latest, r: "release", pkgdown: "true" }
           - { os: macOS-latest, r: "oldrel" }
-          # - { os: ubuntu-latest, r: "devel" } # fails on setup-r
-          # - { os: ubuntu-latest, r: "release" } # fails at script on missing glmulti
-          # - { os: ubuntu-latest, r: "oldrel" } # fails at script on missing glmulti
+          - { os: ubuntu-latest, r: "devel" } # fails on setup-r
+          - { os: ubuntu-latest, r: "release" } # fails at script on missing glmulti
+          - { os: ubuntu-latest, r: "oldrel" } # fails at script on missing glmulti
 
     env:
       # otherwise remotes::fun() errors cause the build to fail. Example: Unavailability of binaries
