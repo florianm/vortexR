@@ -2,7 +2,6 @@ library(vortexR)
 library(vortexRdata)
 context("test Pextinct")
 
-
 test_that("Pextinct", {
     # Using Pacioni et al. example data. See ?pac.run.lhs for more details.
     data(pac.run.lhs)
@@ -16,4 +15,3 @@ test_that("Pextinct", {
     expect_is(Pext, "list")
     expect_equal(dim(Pext[[1]]), c(51, 8))
 })
-

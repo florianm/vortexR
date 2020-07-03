@@ -2,7 +2,6 @@ library(vortexR)
 library(vortexRdata)
 context("test rRec")
 
-
 test_that("rRec", {
     # Using Pacioni et al. example data. See ?pac.clas for more details.
     data(pac.clas)

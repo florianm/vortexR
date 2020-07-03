@@ -2,7 +2,6 @@ library(vortexR)
 library(vortexRdata)
 context("test plots")
 
-
 test_that("test dot_plot", {
     data(pac.clas)
     dot <- dot_plot(data=pac.clas,

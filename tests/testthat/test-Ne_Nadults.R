@@ -2,7 +2,6 @@ library(vortexR)
 library(vortexRdata)
 context("test Ne_Nadults")
 
-
 test_that("test Ne", {
   # dir
   pac.dir <- system.file("extdata", "pacioni", package="vortexRdata")

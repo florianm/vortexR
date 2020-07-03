@@ -12,8 +12,4 @@ test_that("test pairwise", {
                   save2disk=FALSE)
 
   expect_equal(pac.clas.pairw, pairw)
-<<<<<<< .merge_file_hNot4U
-=======
-  #expect_equal(1,1) # ahem
->>>>>>> .merge_file_zyLxFZ
 })
