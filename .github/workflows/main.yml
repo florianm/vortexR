@@ -21,13 +21,13 @@ jobs:
           # comment out lines if you do not want to build on certain platforms
           - { os: windows-latest, r: "devel" }
           - { os: windows-latest, r: "release" }
-          - { os: windows-latest, r: "oldrel" }
-          - { os: macOS-latest, r: "devel" } # fails at script on missing glmulti
+          # - { os: windows-latest, r: "oldrel" }
+          # - { os: macOS-latest, r: "devel" } # fails at script on missing glmulti
           - { os: macOS-latest, r: "release", pkgdown: "true" }
           - { os: macOS-latest, r: "oldrel" }
-          - { os: ubuntu-latest, r: "devel" } # fails on setup-r
-          - { os: ubuntu-latest, r: "release" } # fails at script on missing glmulti
-          - { os: ubuntu-latest, r: "oldrel" } # fails at script on missing glmulti
+          # - { os: ubuntu-latest, r: "devel" } # fails on setup-r
+          # - { os: ubuntu-latest, r: "release" } # fails at script on missing glmulti
+          # - { os: ubuntu-latest, r: "oldrel" } # fails at script on missing glmulti
 
     env:
       # otherwise remotes::fun() errors cause the build to fail. Example: Unavailability of binaries
@@ -151,6 +151,11 @@ jobs:
 
       # - name: Debug current build
       #   uses: mxschmitt/action-tmate@v2
+
+      # TODO win/oldrel: install rlang here (tic fails)
+      #
+      # TODO ubuntu/rel, oldrel; macOS/devel:
+      # checking whether JNI programs can be compiled... configure: error: Cannot compile a simple JNI program. See config.log for details.
 
       - name: "[Stage] Install"
         if: matrix.config.os != 'macOS-latest' || matrix.config.r != 'devel'

@@ -1,8 +1,18 @@
+<<<<<<< .merge_file_w9qNZ9
 <!-- badges: start -->
 [![Build Status](https://travis-ci.org/carlopacioni/vortexR.svg?branch=master)](https://travis-ci.org/carlopacioni/vortexR)
 [![Coverage Status](https://coveralls.io/repos/github/carlopacioni/vortexR/badge.svg?branch=master)](https://coveralls.io/github/carlopacioni/vortexR?branch=master)
 [![R CMD Check via {tic}](https://github.com/florianm/vortexR/workflows/R%20CMD%20Check%20via%20{tic}/badge.svg?branch=master)](https://github.com/florianm/vortexR/actions)
 <!-- badges: end -->
+=======
+[![Build Status](https://travis-ci.org/carlopacioni/vortexR.svg?branch=master)](https://travis-ci.org/carlopacioni/vortexR)
+[![Coverage Status](https://coveralls.io/repos/carlopacioni/vortexR/badge.svg?branch=master&service=github)](https://coveralls.io/github/carlopacioni/vortexR?branch=master)
+[![Documentation Status](https://readthedocs.org/projects/vortexr/badge/?version=latest)](https://readthedocs.org/projects/vortexr/?badge=latest)
+
+Florianm fork: [![Build Status](https://travis-ci.org/florianm/vortexR.svg?branch=master)](https://travis-ci.org/florianm/vortexR)
+[![Coverage Status](https://coveralls.io/repos/florianm/vortexR/badge.svg?branch=master&service=github)](https://coveralls.io/github/florianm/vortexR?branch=master)
+
+>>>>>>> .merge_file_SLkv4g
 # vortexR
 An R package for Post Vortex Simulation Analysis.  
 
