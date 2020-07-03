@@ -25,7 +25,6 @@ While there is no strict requirement to do so, we find the free RStudio IDE
 It will be very easy to keep clean and then capture your sequence of commands, 
 including possible data manipulations, so that you can return to it later.
 
-
 You can install the latest stable release of vortexR from CRAN using:
 
 ```
